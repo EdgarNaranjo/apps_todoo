@@ -7,7 +7,7 @@
         Odoo Virtual Office. This can be used to add content from sources such as external report servers.
     """,
     'version': '10.0.0.0.1',
-    'category': 'Extra Tools',
+    'category': 'Website',
     'license': 'LGPL-3',
     'author': "ToDOO",
     'website': "https://todooweb.es/",
@@ -18,6 +18,8 @@
     ],
     'support': 'devtodoo@gmail.com',
     'depends': ['base',
+                'sale',
+                'account',
                 'mail',
                 'website',
                 'website_portal_sale',
@@ -26,6 +28,9 @@
     'data': [
         'security/ir.model.access.csv',
         'views/website_iframe.xml',
+    ],
+    'images': [
+        'static/description/iframe_screenshot.png'
     ],
     'installable': True,
     'application': False,
