@@ -7,7 +7,7 @@
         Odoo Virtual Office. This can be used to add content from sources such as external report servers.
     """,
     'version': '10.0.0.0.1',
-    'category': 'Extra Tools',
+    'category': 'Website',
     'license': 'LGPL-3',
     'author': "ToDOO",
     'website': "https://todooweb.es/",
