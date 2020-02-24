@@ -29,6 +29,9 @@
         'security/ir.model.access.csv',
         'views/website_iframe.xml',
     ],
+    'images': [
+        'static/description/iframe_screenshot.png'
+    ],
     'installable': True,
     'application': False,
     'auto_install': False,
