@@ -18,6 +18,8 @@
     ],
     'support': 'devtodoo@gmail.com',
     'depends': ['base',
+                'sale',
+                'account',
                 'mail',
                 'website',
                 'website_portal_sale',
