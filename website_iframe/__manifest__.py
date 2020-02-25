@@ -1,15 +1,31 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
+##############################################################################
+#
+#    This module allows Clients to view external content through iframes by accessing 
+#    their personal account of the Odoo Virtual Office. This can be used to add content 
+#    from sources such as external report servers.
+#    Copyright (C) 2020- TODOOWEB.ES (https://www.todooweb.es)
+#    @author ToDOO (https://www.linkedin.com/company/todooweb)
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+###############################################################################
 {
     'name': "Iframes Dashboard",
     'summary': """Extend the Odoo Virtual Office with the option to add external iFrames.""",
     'description': """
-        This module allows Clients to view external content through iframes by accessing their personal account of the 
-        Odoo Virtual Office. This can be used to add content from sources such as external report servers.
+        Extend the Odoo Virtual Office with the option to add external iFrames.
     """,
-    'version': '10.0.0.0.1',
+    'version': '10.0.0.1.1',
     'category': 'Website',
     'license': 'LGPL-3',
-    'author': "ToDOO",
+    'author': "ToDOO (www.todooweb.es)",
     'website': "https://todooweb.es/",
     'contributors': [
         "Equipo Dev <devtodoo@gmail.com>",
