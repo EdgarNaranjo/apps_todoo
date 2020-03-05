@@ -181,7 +181,7 @@
                 <group name="group_p">
                     <group name="data_general">
                         <field name="competition_id" options='{"no_open": True, "no_create": True}' required="True"/>
-                        <field name="category_professional" required="True"/>
+                        <field name="category_professional" required="True" options='{"no_open": True, "no_create": True}'/>
                         <field name="state_id" required="True" options='{"no_open": True, "no_create": True}'/>
                         <field name="net_salary"/>
                         <field name="brut_salary"/>
@@ -537,6 +537,60 @@
         <field name="view_id" ref="tag_ine_category_search"/>
     </record>
 
+   <!-- View Form Professional profile -->
+    <record model="ir.ui.view" id="professional_profile_form">
+      <field name="name">professional.profile.form</field>
+      <field name="model">professional.profile</field>
+      <field name="arch" type="xml">
+        <form string="Professional profile">
+            <sheet>
+              <group>
+                  <group>
+                      <field name="name"/>
+                      <field name="code" required='True'/>
+                  </group>
+                  <group>
+                      <field name="active"/>
+                  </group>
+                  <field name="note" placeholder="Internal note..."/>
+              </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+  <!-- View Tree Professional profile -->
+    <record model="ir.ui.view" id="professional_profile_tree">
+      <field name="name">professional.profile.tree</field>
+      <field name="model">professional.profile</field>
+      <field name="arch" type="xml">
+        <tree string="Professional profile">
+            <field name="name"/>
+            <field name="code"/>
+            <field name="active"/>
+        </tree>
+      </field>
+    </record>
+
+  <!-- View search Professional profile -->
+    <record model="ir.ui.view" id="professional_profile_search">
+      <field name="name">professional.profile.search</field>
+      <field name="model">professional.profile</field>
+      <field name="arch" type="xml">
+        <search string="Professional profile">
+            <field name="name"/>
+            <field name="code"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="action_professional_profile" model="ir.actions.act_window">
+        <field name="name">Professional profile</field>
+        <field name="res_model">professional.profile</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="professional_profile_search"/>
+    </record>
+
     <menuitem name="QA Employee" id="menu_parent_learning_qa" web_icon="sale,static/description/icon.png"/>
     <menuitem name="QA Employee" id="menu_learning_qa" sequence="1"  parent="menu_parent_learning_qa"/>
     <menuitem name="Settings" id="menu_learning_setting" sequence="2" parent="menu_parent_learning_qa" groups="sales_team.group_sale_manager"/>
@@ -545,5 +599,6 @@
     <menuitem id="menu_qa_competition_tag" sequence="2" name="Competitions" parent="menu_learning_qa" action="action_tag_competition"/>
     <menuitem id="menu_qa_cnae_tag" sequence="3" name="Categories CNAE" parent="menu_learning_setting" action="action_tag_cnae_category" groups="sales_team.group_sale_manager"/>
     <menuitem id="menu_qa_ine_tag" sequence="4" name="Categories INE" parent="menu_learning_setting" action="action_tag_ine_category" groups="sales_team.group_sale_manager"/>
+    <menuitem id="menu_qa_professional_profile" sequence="5" name="Professional profile" parent="menu_learning_setting" action="action_professional_profile" groups="sales_team.group_sale_manager"/>
   </data>
 </odoo>

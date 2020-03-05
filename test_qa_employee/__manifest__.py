@@ -24,7 +24,7 @@
     'description': """
         Measure the reliability index of a company and the job offers they publish and other functionalities using Machine Learning.
     """,
-    'version': '10.0.0.1.1',
+    'version': '10.1.0.1.1',
     'category': 'Human Resources',
     'license': 'LGPL-3',
     'author': "ToDOO (www.todooweb.es)",
