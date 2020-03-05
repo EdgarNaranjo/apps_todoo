@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0-20190207\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-05 12:56+0000\n"
-"PO-Revision-Date: 2020-03-05 12:56+0000\n"
+"POT-Creation-Date: 2020-03-05 22:36+0000\n"
+"PO-Revision-Date: 2020-03-05 22:36+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -72,6 +72,7 @@ msgstr "> 60 min"
 
 #. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_active
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_active
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_active
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_active
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_active
@@ -174,11 +175,6 @@ msgid "Category"
 msgstr "Categoría"
 
 #. module: test_qa_employee
-#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_category_professional
-msgid "Category professiona"
-msgstr "Categoría profesional"
-
-#. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_city
 #: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
 msgid "City"
@@ -210,6 +206,7 @@ msgid "Close offer"
 msgstr "Cerrar oferta"
 
 #. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_code
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_code_cnae
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_code_ine
 msgid "Code"
@@ -262,6 +259,7 @@ msgstr "País"
 
 #. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_create_uid
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_create_uid
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_create_uid
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_create_uid
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_create_uid
@@ -270,6 +268,7 @@ msgstr "Creado por"
 
 #. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_create_date
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_create_date
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_create_date
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_create_date
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_create_date
@@ -298,6 +297,7 @@ msgstr "Descripción"
 
 #. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_display_name
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_display_name
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_display_name
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_display_name
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_display_name
@@ -365,6 +365,7 @@ msgstr "Vacaciones"
 
 #. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_id
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_id
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_id
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_id
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_id
@@ -412,6 +413,7 @@ msgid "Internal Communication Consultant"
 msgstr "Consultora de Comunicación Interna"
 
 #. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.professional_profile_form
 #: model:ir.ui.view,arch_db:test_qa_employee.tag_category_cnae_form
 #: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
 #: model:ir.ui.view,arch_db:test_qa_employee.tag_ine_category_form
@@ -420,6 +422,7 @@ msgstr "Nota Interna..."
 
 #. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer___last_update
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile___last_update
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category___last_update
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition___last_update
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category___last_update
@@ -428,6 +431,7 @@ msgstr "Última modificación en"
 
 #. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_write_uid
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_write_uid
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_write_uid
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_write_uid
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_write_uid
@@ -436,6 +440,7 @@ msgstr "Última actualización por"
 
 #. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_write_date
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_write_date
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_write_date
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_write_date
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_write_date
@@ -484,6 +489,7 @@ msgid "Multinational company"
 msgstr "Empresa multinational"
 
 #. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_name
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_name
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_name
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_name
@@ -528,6 +534,7 @@ msgid "Note"
 msgstr "Nota"
 
 #. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_professional_profile_note
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_note
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_note
 #: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_note
@@ -609,6 +616,21 @@ msgstr "Primer empleo"
 #: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
 msgid "Private healthcare"
 msgstr "Atencion sanitaria privada"
+
+#. module: test_qa_employee
+#: model:ir.model,name:test_qa_employee.model_professional_profile
+msgid "Professional Profile"
+msgstr "Perfil profesional"
+
+#. module: test_qa_employee
+#: model:ir.actions.act_window,name:test_qa_employee.action_professional_profile
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_category_professional
+#: model:ir.ui.menu,name:test_qa_employee.menu_qa_professional_profile
+#: model:ir.ui.view,arch_db:test_qa_employee.professional_profile_form
+#: model:ir.ui.view,arch_db:test_qa_employee.professional_profile_search
+#: model:ir.ui.view,arch_db:test_qa_employee.professional_profile_tree
+msgid "Professional profile"
+msgstr "Perfil profesional"
 
 #. module: test_qa_employee
 #: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_date_published

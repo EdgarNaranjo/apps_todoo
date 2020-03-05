@@ -86,6 +86,20 @@ PORTAL_EMPLOYEE = [
 	('7', 'Others'),
 ]
 
+PROFESSIONAL_CATEGORY = [
+	('1', 'Engineers and Graduates. Senior management staff'),
+	('2', 'Technical Engineers, Experts and Certified Assistants'),
+	('3', 'Administrative and Workshop Chiefs'),
+	('4', 'Untitled Assistants'),
+	('5', 'Administrative Officers'),
+	('6', 'Juniors'),
+	('7', 'Administrative Assistants'),
+	('8', 'First and Second Officers'),
+	('9', 'Third Officers and Specialists'),
+	('10', 'Pawns'),
+	('11', 'Workers under eighteen, whatever their professional category'),
+]
+
 
 class TagCompetitions(models.Model):
 	_name = 'tag.competition'
@@ -243,7 +257,7 @@ class CompetitionOffer(models.Model):
 	note_general = fields.Char('Note', help='Final Note')
 	media_general = fields.Float('Average', help='Average Note')
 	portal_employee = fields.Selection(PORTAL_EMPLOYEE, string='Portal', track_visibility='onchange')
-	category_professional = fields.Char('Category professional')
+	category_professional = fields.Many2one("professional.profile", string='Professional profile', ondelete='restrict')
 	net_salary = fields.Float('Salary net')
 	brut_salary = fields.Float('Salary brut')
 	description = fields.Text('Description')
@@ -255,7 +269,6 @@ class CompetitionOffer(models.Model):
 	other_benefits = fields.Text('Others benefit')
 	date_published = fields.Date(string='Published Date', required=True, index=True, default=fields.Datetime.now)
 	state_id = fields.Many2one("res.country.state", string='State', ondelete='restrict')
-
 	# calculator
 	todo_benefit_count = fields.Integer(compute='_compute_todo_benefit')
 
@@ -360,23 +373,11 @@ class CompetitionOffer(models.Model):
 		return media
 
 
-# 	owner_user_id = fields.Many2one('res.users', string='Owner',track_visibility='onchange')
-# 	owner_user_ids = fields.Many2many('res.users', 'owner_inventory_user_rel', 'owner_id', 'user_id', string='Other Owners', track_visibility='onchange')
-# 	component_ids = fields.One2many('component.stuft', 'component_id', ondelete='restrict', string='Components')
-# 	system_id = fields.Many2one("system.op", string="Operative System")
-# 	invoice_id = fields.Char('Ref. Invoice')
-# 	address_mac = fields.Char('MAC')
-# 	# calculator
-# 	todo_equip_ids = fields.One2many('res.users', copy=False, compute='_compute_todo_equip')
-# 	todo_comp_ids = fields.One2many('component.stuft', copy=False, compute='_compute_todo_equip')
-# 	todo_equip_count = fields.Integer(compute='_compute_todo_equip')
-# 	todo_comp_count = fields.Integer(compute='_compute_todo_equip')
-#
-# 	@api.one
-# 	@api.depends('owner_user_ids', 'component_ids')
-# 	def _compute_todo_equip(self):
-# 		self.todo_equip_ids = self.owner_user_ids
-# 		self.todo_comp_ids = self.component_ids
-# 		self.todo_equip_count = len(self.todo_equip_ids)
-# 		self.todo_comp_count = len(self.todo_comp_ids)
+class ProfessionalProfile(models.Model):
+	_name = 'professional.profile'
+	_description = 'Professional Profile'
 
+	name = fields.Char('Name', required=True, index=True)
+	active = fields.Boolean('Active', default='True')
+	note = fields.Text('Notes')
+	code = fields.Char('Code')

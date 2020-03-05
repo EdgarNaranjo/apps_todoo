@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!--Category-->
     <record id="tag_competition_0" model="res.partner.category">
         <field name="name">Local company</field>
         <field name="active">True</field>
