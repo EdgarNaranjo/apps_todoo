@@ -1,0 +1,929 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* test_qa_employee
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20190207\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-05 12:56+0000\n"
+"PO-Revision-Date: 2020-03-05 12:56+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "....Job Description"
+msgstr "....Description de puesto de trabajo"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "....Others Benefits"
+msgstr "....Otros beneficios"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_location:0
+msgid "30 min < x >= 60 min"
+msgstr "30 min < x >= 60 min"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_location:0
+msgid "< 30 min"
+msgstr "< 30 min"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "<b>Competition:</b>"
+msgstr "<b>Competencia:</b>"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "<b>Portal:</b>"
+msgstr "<b>Portal:</b>"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "<b>Registered number:</b>"
+msgstr "<b>Personas registradas:</b>"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "<em>Type contract Unassigned</em>"
+msgstr "<em>Tipo contrato no asignado</em>"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "<em>Type salary Unassigned</em>"
+msgstr "<em>Tipo salario no asignado</em>"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "<span class=\"oe_grey\"> at </span>"
+msgstr "<span class=\"oe_grey\"> a </span>"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_location:0
+msgid "> 60 min"
+msgstr "> 60 min"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_active
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_active
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_active
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "Activities and info"
+msgstr "Actividades e info"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "Address"
+msgstr "Dirección"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "Archive"
+msgstr "Archivar"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_media_general
+msgid "Average"
+msgstr "Probabilidad"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_competition_offer_media_general
+msgid "Average Note"
+msgstr "Evaluación"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_baby_benefit
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Babycare servicee"
+msgstr "Servicio guarderia"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Benefits"
+msgstr "Beneficios"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "Benefits:"
+msgstr "Beneficios:"
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_size:0
+msgid "Big company"
+msgstr "Gran compañía"
+
+#. module: test_qa_employee
+#: selection:competition.offer,portal_employee:0
+msgid "Bizneo"
+msgstr "Bizneo"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_tag_cnae_id
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_tag_cnae_id
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_search
+msgid "CNAE"
+msgstr "CNAE"
+
+#. module: test_qa_employee
+#: selection:competition.offer,state:0
+msgid "Cancel"
+msgstr "Cancelada"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Cancel offer"
+msgstr "Cancelar oferta"
+
+#. module: test_qa_employee
+#: model:ir.actions.act_window,name:test_qa_employee.action_tag_cnae_category
+#: model:ir.model,name:test_qa_employee.model_tag_cnae_category
+#: model:ir.ui.menu,name:test_qa_employee.menu_qa_cnae_tag
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_category_cnae_form
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_cnae_category_search
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_cnae_category_tree
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_ine_category_search
+msgid "Categories CNAE"
+msgstr "Categorías CNAE"
+
+#. module: test_qa_employee
+#: model:ir.actions.act_window,name:test_qa_employee.action_tag_ine_category
+#: model:ir.model,name:test_qa_employee.model_tag_ine_category
+#: model:ir.ui.menu,name:test_qa_employee.menu_qa_ine_tag
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_ine_category_form
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_ine_category_tree
+msgid "Categories INE"
+msgstr "Categorías INE"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_category_id
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_search
+msgid "Category"
+msgstr "Categoría"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_category_professional
+msgid "Category professiona"
+msgstr "Categoría profesional"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_city
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "City"
+msgstr "Ciudad"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_requirement:0
+msgid "Client accurately mentions the tools with which it works"
+msgstr "Cliente meniciona con exactitud las herramientas con las que se trabaja"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_requirement:0
+msgid "Client communicates with clear clarity what he needs and the functions and responsibilities of the employee"
+msgstr "Cliente comunica con rotunda claridad qué necesita y las funciones y responsabilidades del empleado"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_requirement:0
+msgid "Client does not specify anything in particular"
+msgstr "Cliente no especifica nada en concreto"
+
+#. module: test_qa_employee
+#: selection:competition.offer,state:0
+msgid "Close"
+msgstr "Cerrada"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Close offer"
+msgstr "Cerrar oferta"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_code_cnae
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_code_ine
+msgid "Code"
+msgstr "Código"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_zip
+msgid "Code zip"
+msgstr "Código zip"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_color
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_color
+msgid "Color Index"
+msgstr "Índice de Colores"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_car_benefit
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Company car"
+msgstr "Coche empresa"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_competition_id
+msgid "Competition"
+msgstr "Competencia"
+
+#. module: test_qa_employee
+#: model:ir.model,name:test_qa_employee.model_competition_offer
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_graph
+msgid "Competition Offer"
+msgstr "Oferta competencia"
+
+#. module: test_qa_employee
+#: model:ir.actions.act_window,name:test_qa_employee.action_tag_competition
+#: model:ir.model,name:test_qa_employee.model_tag_competition
+#: model:ir.ui.menu,name:test_qa_employee.menu_qa_competition_tag
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_graph
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_search
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_tree
+msgid "Competitions"
+msgstr "Competencia"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_country_id
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "Country"
+msgstr "País"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_create_uid
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_create_uid
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_create_uid
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_create_date
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_create_date
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_create_date
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_competition_offer_note_location
+msgid "Customer location relative to your home"
+msgstr " Ubicación del cliente respecto a tu casa"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Data offer"
+msgstr "Datos oferta"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "Delete"
+msgstr "Suprimir"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_display_name
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_display_name
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_display_name
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: test_qa_employee
+#: selection:competition.offer,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "Edit..."
+msgstr "Editar..."
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_company:0
+msgid "Employer Branding Consultant"
+msgstr "Consultor de marca empleador"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_holiday:0
+msgid "Exactly what the agreement indicates"
+msgstr "Exactamente lo que indica el convenio"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_competition_offer_note_general
+msgid "Final Note"
+msgstr "Evaluacion final"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_food_benefit
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Food ticket"
+msgstr "Ticket comida"
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_company:0
+msgid "Formation HR Consultant"
+msgstr "Consultora RRHH de formación"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_code_general
+msgid "General"
+msgstr "General"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_search
+msgid "Group by..."
+msgstr "Agrupar por..."
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_competition_offer_tag_cnae_id
+#: model:ir.model.fields,help:test_qa_employee.field_tag_competition_tag_cnae_id
+msgid "Groups CNAE."
+msgstr "Grupo CNAE."
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_note_holiday
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+msgid "Holiday"
+msgstr "Vacaciones"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_id
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_id
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_id
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_id
+msgid "ID"
+msgstr "ID"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_category_ine_id
+msgid "INE"
+msgstr "INE"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: test_qa_employee
+#: selection:competition.offer,portal_employee:0
+msgid "Indeed"
+msgstr "Indeed"
+
+#. module: test_qa_employee
+#: selection:competition.offer,portal_employee:0
+msgid "Infoempleo"
+msgstr "Infoempleo"
+
+#. module: test_qa_employee
+#: selection:competition.offer,portal_employee:0
+msgid "Infojobs"
+msgstr "Infojobs"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_hours:0
+msgid "Intensive day all year"
+msgstr "Jornada intensiva todo el año"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_hours:0
+msgid "Intensive day in summer"
+msgstr "Jornada intensiva en verano"
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_company:0
+msgid "Internal Communication Consultant"
+msgstr "Consultora de Comunicación Interna"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_category_cnae_form
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_ine_category_form
+msgid "Internal note..."
+msgstr "Nota Interna..."
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer___last_update
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category___last_update
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition___last_update
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_write_uid
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_write_uid
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_write_uid
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_write_date
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_write_date
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_write_date
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: test_qa_employee
+#: selection:competition.offer,portal_employee:0
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#. module: test_qa_employee
+#: model:res.partner.category,name:test_qa_employee.tag_competition_0
+msgid "Local company"
+msgstr "Empresa local"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_note_location
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_salary:0
+msgid "Lower salary at market level"
+msgstr "Sueldo inferior a nivel de mercado"
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_size:0
+msgid "Medium company"
+msgstr "Empresa mediana"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_image_medium
+msgid "Medium-sized image"
+msgstr "Imagen de tamaño mediano"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_tag_competition_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image. Use this field in form views or some kanban views."
+msgstr "Imagen de tamaño medio de este contacto. Se redimensiona automáticamente como una imagen de 128x128px. Utilice este campo en vistas de formulario o algunas vistas kanban."
+
+#. module: test_qa_employee
+#: model:res.partner.category,name:test_qa_employee.tag_competition_3
+msgid "Multinational company"
+msgstr "Empresa multinational"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_name
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_name
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_name
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_name_company
+msgid "Name company"
+msgstr "Nombre compañia"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_name
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Name offer"
+msgstr "Name oferta"
+
+#. module: test_qa_employee
+#: model:res.partner.category,name:test_qa_employee.tag_competition_2
+msgid "National company"
+msgstr "Empresa nacional"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_telecom:0
+msgid "No telecommuting"
+msgstr "Nada de teletrabajo"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_salary:0
+msgid "Not specified / outsourced"
+msgstr "No especificadas / subcontratado"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_type_contract:0
+msgid "Not specified in the offer"
+msgstr "No especificado en la oferta"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_note_general
+msgid "Note"
+msgstr "Nota"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_note
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_note
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_ine_category_note
+msgid "Notes"
+msgstr "Notas"
+
+#. module: test_qa_employee
+#: model:ir.actions.act_window,name:test_qa_employee.action_competition_offer
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_tree
+msgid "Offer"
+msgstr "Oferta"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_offer_ids
+#: model:ir.ui.menu,name:test_qa_employee.menu_qa_competition_offer
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "Offers"
+msgstr "Ofertas"
+
+#. module: test_qa_employee
+#: selection:competition.offer,state:0
+msgid "Open"
+msgstr "Abierta"
+
+#. module: test_qa_employee
+#: selection:competition.offer,portal_employee:0
+msgid "Others"
+msgstr "Otros"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_other_benefits
+msgid "Others benefit"
+msgstr "Otros beneficios"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_cnae_category_parent_id
+msgid "Parent"
+msgstr "Categoria Padre"
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_company:0
+msgid "Performance Evaluation Consultant"
+msgstr "Consultora Evaluación de Desempeño"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_portal_employee
+msgid "Portal"
+msgstr "Portal"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_telecom:0
+msgid "Possibility of teleworking every day"
+msgstr "Posibilidad de teletrabajo todos los días"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_telecom:0
+msgid "Possibility of teleworking more than one day a week"
+msgstr "Posibilidad de teletrabajo más de un día a la semana"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_type_contract:0
+msgid "Practices (FCT and similar)"
+msgstr "Prácticas (FCT y similares)"
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_sector:0
+msgid "Primary sector"
+msgstr "Sector primario"
+
+#. module: test_qa_employee
+#: selection:competition.offer,portal_employee:0
+msgid "Primer empleo"
+msgstr "Primer empleo"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_sanity_benefit
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Private healthcare"
+msgstr "Atencion sanitaria privada"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_date_published
+msgid "Published Date"
+msgstr "Fecha publicacion"
+
+#. module: test_qa_employee
+#: model:ir.ui.menu,name:test_qa_employee.menu_learning_qa
+#: model:ir.ui.menu,name:test_qa_employee.menu_parent_learning_qa
+msgid "QA Employee"
+msgstr "QA Competidores"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Recalculated"
+msgstr "Recalcular"
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_company:0
+msgid "Recruitment and Selection"
+msgstr "Reclutamiento y selección"
+
+#. module: test_qa_employee
+#: model:res.partner.category,name:test_qa_employee.tag_competition_1
+msgid "Regional company"
+msgstr "Empresa regional"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_registered
+msgid "Registered number"
+msgstr "Personas registradas"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "Registered:"
+msgstr "Registrados:"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_note_requirement
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+msgid "Requirement"
+msgstr "Requerimientos"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_competition_offer_note_requirement
+msgid "Requirements of the client"
+msgstr "Requerimientos del cliente"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_note_salary
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+msgid "Salary"
+msgstr "Salario"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_salary:0
+msgid "Salary above market"
+msgstr "Sueldo por encima de mercado"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_salary:0
+msgid "Salary at market level"
+msgstr "Sueldo a nivel de mercado"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_brut_salary
+msgid "Salary brut"
+msgstr "Salario bruto"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_competition_offer_note_salary
+msgid "Salary expectations"
+msgstr "Espectativas salariales"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_net_salary
+msgid "Salary net"
+msgstr "Salario neto"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_note_hours
+msgid "Schedule"
+msgstr "Horario"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+msgid "Scheduler"
+msgstr "Horario"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_type_contract:0
+msgid "Scholarship"
+msgstr "Beca"
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_sector:0
+msgid "Secondary sector"
+msgstr "Sector secundario"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_sector_cnae
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_sector_cnae
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_search
+msgid "Sector"
+msgstr "Sector"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Set to Draft"
+msgstr "Cambiar a borrador"
+
+#. module: test_qa_employee
+#: model:ir.ui.menu,name:test_qa_employee.menu_learning_setting
+msgid "Settings"
+msgstr "Configuración"
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_size:0
+msgid "Small company"
+msgstr "Empresa pequeña"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_image_small
+msgid "Small-sized image"
+msgstr "Imagen de tamaño pequeño"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_tag_competition_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image. Use this field anywhere a small image is required."
+msgstr "Imagen de pequeño tamaño de este contacto. Se redimensiona automáticamente como una imagen de 64x64px. Use este campo en cualquier lugar donde se requiera una imagen pequeña."
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_hours:0
+msgid "Standard office hours all year round"
+msgstr "Horario estándar de oficina todo el año"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_state
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_state_id
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_state_id
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "State"
+msgstr "Estado"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_competition_offer_state
+msgid "Status of the offer"
+msgstr "Estado de la oferta"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_street
+msgid "Street"
+msgstr "Calle"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "Street 2..."
+msgstr "Calle 2..."
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_street2
+msgid "Street2"
+msgstr "Calle2"
+
+#. module: test_qa_employee
+#: selection:competition.offer,portal_employee:0
+msgid "Student Job"
+msgstr "Student Job"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_holiday:0
+msgid "Superior to what is established in the agreement"
+msgstr "Superior a lo establecido en el acuerdo"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "Tags..."
+msgstr "Etiquetas..."
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_note_telecom
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+msgid "Telecommuting"
+msgstr "Teletrabajo"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_competition_offer_note_telecom
+msgid "Telecommuting (if it makes sense in the professional category of the offer)"
+msgstr "Teletrabajo (si tiene sentido en la categoría profesional de la oferta)"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_template_client
+msgid "Template"
+msgstr "Plantilla"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_tag_competition_template_client
+msgid "Template on period."
+msgstr "Plantilla en el periodo."
+
+#. module: test_qa_employee
+#: selection:tag.competition,type_sector:0
+msgid "Third sector"
+msgstr "Sector terciario"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_tag_competition_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr "Este campo contiene la imagen utilizada como avatar para este contacto, limitada a 1024x1024 px"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_todo_benefit_count
+msgid "Todo benefit count"
+msgstr "Total beneficios"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_search
+msgid "Type Company"
+msgstr "Tipo compañia"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_tag_competition_type_company
+msgid "Type Company of the RRHH"
+msgstr "Tipo Compañia de RRHH"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_search
+msgid "Type Contract"
+msgstr "Tipo contrato"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_search
+msgid "Type Sector"
+msgstr "Tipo Sector"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_search
+msgid "Type Size"
+msgstr "Tamaño"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_type_company
+msgid "Type company"
+msgstr "Tipo compañia"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_competition_offer_note_type_contract
+msgid "Type contract"
+msgstr "Tipo contrato"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_tag_competition_type_size
+msgid "Type organization size"
+msgstr "Tipo de compañia segun tamaño"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_type_sector
+#: model:ir.model.fields,help:test_qa_employee.field_tag_competition_type_sector
+msgid "Type sector"
+msgstr "Tipo sector"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_type_size
+msgid "Type size"
+msgstr "Tipo tamaño"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "Unarchive"
+msgstr "Desarchivar"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_type_contract:0
+msgid "Undefined"
+msgstr "Indefinido"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_kanban
+msgid "Unread Messages"
+msgstr "Mensajes por leer"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.competition_offer_form
+msgid "Validate"
+msgstr "Validar"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,field_description:test_qa_employee.field_tag_competition_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: test_qa_employee
+#: model:ir.model.fields,help:test_qa_employee.field_tag_competition_website
+msgid "Website of Competition"
+msgstr "Sitio web de Competidores"
+
+#. module: test_qa_employee
+#: selection:competition.offer,note_holiday:0
+msgid "What the agreement indicates but forcing them to take them in specific periods"
+msgstr "Lo que indica el convenio pero obligando a cogerlos en periodos concretos"
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "ZIP"
+msgstr "C.P."
+
+#. module: test_qa_employee
+#: model:ir.ui.view,arch_db:test_qa_employee.tag_competition_form
+msgid "e.g. www.odoo.com"
+msgstr "Por ejemplo, www.odoo.com"
+
