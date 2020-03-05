@@ -5,7 +5,7 @@
 * Modulo para trabajar iframes en la Oficina Virtual de un cliente
 * Traducciones a español
 
-1 . Machine Learning QA Employee (versión 10.1.0.1.1)
+2 . Machine Learning QA Employee (versión 10.1.0.1.1)
 
 * Measure the reliability index of a company and the job offers they publish and other functionalities using Machine Learning.
 * Traducciones a español
