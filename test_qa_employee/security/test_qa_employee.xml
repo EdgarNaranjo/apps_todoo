@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Rules -->
+    <record id="tag_competition_rule_all_user" model="ir.rule">
+        <field name="name">Competitions all user</field>
+        <field name="model_id" ref="model_tag_competition"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="tag_category_rule_all_user" model="ir.rule">
+        <field name="name">Category all user</field>
+        <field name="model_id" ref="model_tag_cnae_category"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="tag_ine_category_rule_all_user" model="ir.rule">
+        <field name="name">Category INE all user</field>
+        <field name="model_id" ref="model_tag_ine_category"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="competition_offer_rule_all_user" model="ir.rule">
+        <field name="name">Competition Offer all user</field>
+        <field name="model_id" ref="model_competition_offer"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+</odoo>

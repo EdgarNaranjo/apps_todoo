@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <data>
+      <!-- View Form competition -->
+    <record model="ir.ui.view" id="tag_competition_form">
+      <field name="name">tag.competition.form</field>
+      <field name="model">tag.competition</field>
+      <field name="arch" type="xml">
+        <form string="Competitions">
+            <sheet>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+                <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image_medium"}'/>
+                <div class="oe_title">
+                    <h1><field name="name" placeholder="Name" default_focus="1"/></h1>
+                 </div>
+                <group name="group_p">
+                    <group name="data_general">
+                        <label for="street" string="Address"/>
+                        <div class="o_address_format">
+                            <field name="street" placeholder="Street..." class="o_address_street"/>
+                            <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                            <field name="city" placeholder="City" class="o_address_city"/>
+                            <field name="state_id" class="o_address_state" placeholder="State" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" context="{'country_id': country_id, 'zip': zip}"/>
+                            <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                            <field name="country_id" placeholder="Country" class="o_address_country" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                        </div>
+                        <field name="website" widget="url" placeholder="e.g. www.odoo.com"/>
+                        <field name="category_id" placeholder="Tags..." options='{"no_open": True, "no_create": True}' required="True"/>
+                    </group>
+                    <group name="group_f">
+                        <field name="type_company"/>
+                        <field name="type_sector"/>
+                        <field name="type_size"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Activities and info">
+                        <group>
+                            <group name="group_s">
+                                <field name="tag_cnae_id" options="{'no_open':True,'no_create':True}"/>
+                                <field name="sector_cnae" options="{'no_open':True,'no_create':True}"/>
+                                <field name="template_client"/>
+                            </group>
+                            <field name="note" placeholder="Internal note..."/>
+                        </group>
+                    </page>
+                    <page string="Offers">
+                         <field name="offer_ids" readonly="True"/>
+                    </page>
+                </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </form>
+      </field>
+    </record>
+
+  <!-- View Tree competition -->
+    <record model="ir.ui.view" id="tag_competition_tree">
+      <field name="name">tag.competition.tree</field>
+      <field name="model">tag.competition</field>
+      <field name="arch" type="xml">
+        <tree string="Competitions">
+            <field name="name"/>
+            <field name="city"/>
+            <field name="category_id"/>
+            <field name="type_company"/>
+            <field name="type_sector"/>
+            <field name="type_size"/>
+            <field name="sector_cnae"/>
+        </tree>
+      </field>
+    </record>
+
+      <!-- View search competitions -->
+    <record model="ir.ui.view" id="tag_competition_search">
+      <field name="name">tag.competition.search</field>
+      <field name="model">tag.competition</field>
+      <field name="arch" type="xml">
+        <search string="Competitions">
+            <field name="name"/>
+            <field name="city"/>
+            <field name="state_id"/>
+            <field name="country_id"/>
+            <field name="category_id"/>
+            <field name="type_company"/>
+            <field name="type_sector"/>
+            <field name="type_size"/>
+            <field name="tag_cnae_id" />
+            <field name="sector_cnae"/>
+            <separator/>
+            <group  expand='0' string='Group by...'>
+              <filter string='Category' domain="[]" context="{'group_by': 'category_id'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Type Company' domain="[]" context="{'group_by': 'type_company'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Type Sector' domain="[]" context="{'group_by': 'type_sector'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Type Size' domain="[]" context="{'group_by': 'type_size'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='CNAE' domain="[]" context="{'group_by': 'tag_cnae_id'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Sector' domain="[]" context="{'group_by': 'sector_cnae'}"/>
+            </group>
+        </search>
+      </field>
+    </record>
+
+      <!--View Graph competition-->
+    <record id="tag_competition_graph" model="ir.ui.view">
+        <field name="name">tag.competition.graph</field>
+        <field name="model">tag.competition</field>
+        <field name="arch" type="xml">
+            <graph string="Competitions">
+                <field name="category_id"/>
+                <field name="type_company"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_tag_competition" model="ir.actions.act_window">
+        <field name="name">Competitions</field>
+        <field name="res_model">tag.competition</field>
+        <field name="view_mode">tree,graph,form</field>
+        <field name="view_id" ref="tag_competition_search"/>
+        <field name="context">{'active': True}</field>
+    </record>
+
+      <!-- View Form offers -->
+    <record model="ir.ui.view" id="competition_offer_form">
+      <field name="name">competition.offer.form</field>
+      <field name="model">competition.offer</field>
+      <field name="arch" type="xml">
+        <form string="Offer">
+            <header>
+                <button name="action_validate_offer" string="Validate" type="object" class="oe_highlight o_wow" attrs="{'invisible': [('state','!=','draft')]}"/>
+                <button name="action_validate_offer" string="Recalculated" type="object" class="oe_highlight" attrs="{'invisible': [('state','!=','open')]}"/>
+                <button name="action_close_offer" string="Close offer" type="object" class="oe_highlight" attrs="{'invisible': [('state','!=','open')]}"/>
+                <button name="action_cancel_offer" string="Cancel offer" type="object" attrs="{'invisible': [('state','not in', ['draft', 'open'])]}"/>
+                <button name="action_draft_offer" string="Set to Draft" type="object" class="oe_highlight" attrs="{'invisible': [('state','!=','cancel')]}"/>
+                <field name="state" widget="statusbar" statusbar_visible="draft,open,close,cancel"/>
+            </header>
+            <sheet>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+                <div class="oe_title">
+                    <label for="name" class="oe_edit_only"/>
+                    <h1><field name="name" placeholder="Name offer" default_focus="1"/></h1>
+                    <h2 class="o_row">
+                        <div>
+                            <label for="note_general" class="oe_edit_only"/>
+                            <div class="o_row">
+                                <field name="note_general" readonly="True"/>
+                                <span class="oe_grey"> at </span>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="media_general" class="oe_edit_only"/>
+                            <div class="o_row">
+                                <field name="media_general" readonly="True"/>
+                                <span>%</span>
+                            </div>
+                        </div>
+                    </h2>
+                 </div>
+                <group name="group_p">
+                    <group name="data_general">
+                        <field name="competition_id" options='{"no_open": True, "no_create": True}' required="True"/>
+                        <field name="category_professional" required="True"/>
+                        <field name="state_id" required="True" options='{"no_open": True, "no_create": True}'/>
+                        <field name="net_salary"/>
+                        <field name="brut_salary"/>
+                        <field name="tag_cnae_id" options="{'no_open':True,'no_create':True}"/>
+                        <field name="sector_cnae" options="{'no_open':True,'no_create':True}"/>
+                    </group>
+                    <group name="group_f">
+                        <field name="portal_employee" required="True"/>
+                        <field name="date_published"/>
+                        <field name="registered"/>
+                    </group>
+                </group>
+                <field name="description" nolabel="True"  placeholder="....Job Description"/>
+                <notebook>
+                    <page string="Data offer">
+                        <group>
+                            <group name="group_s">
+                                <field name="name_company" readonly="True"/>
+                                <field name="note_type_contract"/>
+                                <field name="note_location"/>
+                                <field name="note_requirement"/>
+                            </group>
+                            <group name="group_t">
+                                <field name="note_holiday"/>
+                                <field name="note_salary"/>
+                                <field name="note_hours"/>
+                                <field name="note_telecom"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Benefits">
+                        <group>
+                            <group name="group_bs">
+                                <field name="sanity_benefit" string="Private healthcare"/>
+                                <field name="car_benefit" string="Company car"/>
+                            </group>
+                            <group name="group_bt">
+                                <field name="baby_benefit" string="Babycare servicee"/>
+                                <field name="food_benefit" string="Food ticket"/>
+                            </group>
+                        </group>
+                        <field name="other_benefits" nolabel="True" placeholder="....Others Benefits"/>
+                    </page>
+                </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </form>
+      </field>
+    </record>
+
+  <!-- View Tree offer -->
+    <record model="ir.ui.view" id="competition_offer_tree">
+      <field name="name">competition.offer.tree</field>
+      <field name="model">competition.offer</field>
+      <field name="arch" type="xml">
+        <tree string="Offer" decoration-muted="state=='cancel'" decoration-primary="state=='draft'" decoration-danger="note_general=='Reprobate'">
+            <field name="name"/>
+            <field name="competition_id"/>
+            <field name="category_professional"/>
+            <field name="state_id"/>
+            <field name="sector_cnae"/>
+            <field name="portal_employee"/>
+            <field name="net_salary"/>
+            <field name="brut_salary"/>
+            <field name="date_published"/>
+            <field name="registered"/>
+            <field name="note_general"/>
+            <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+      <!-- View search offer -->
+    <record model="ir.ui.view" id="competition_offer_search">
+      <field name="name">competition.offer.search</field>
+      <field name="model">competition.offer</field>
+      <field name="arch" type="xml">
+        <search string="Offer">
+            <field name="name"/>
+            <field name="competition_id"/>
+            <field name="category_professional"/>
+            <field name="tag_cnae_id"/>
+            <field name="sector_cnae"/>
+            <field name="portal_employee"/>
+            <field name="date_published"/>
+            <field name="state_id"/>
+            <separator/>
+            <group  expand='0' string='Group by...'>
+              <filter string='State' domain="[]" context="{'group_by': 'state_id'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='CNAE' domain="[]" context="{'group_by': 'tag_cnae_id'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Sector' domain="[]" context="{'group_by': 'sector_cnae'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Type Contract' domain="[]" context="{'group_by': 'note_type_contract'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Location' domain="[]" context="{'group_by': 'note_location'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Requirement' domain="[]" context="{'group_by': 'note_requirement'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Holiday' domain="[]" context="{'group_by': 'note_holiday'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Salary' domain="[]" context="{'group_by': 'note_salary'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Scheduler' domain="[]" context="{'group_by': 'note_hours'}"/>
+            </group>
+            <group  expand='0' string='Group by...'>
+              <filter string='Telecommuting' domain="[]" context="{'group_by': 'note_telecom'}"/>
+            </group>
+        </search>
+      </field>
+    </record>
+
+      <!--View Graph offer-->
+    <record id="competition_offer_graph" model="ir.ui.view">
+        <field name="name">competition.offer.graph</field>
+        <field name="model">competition.offer</field>
+        <field name="arch" type="xml">
+            <graph string="Competition Offer">
+                <field name="note_general"/>
+            </graph>
+        </field>
+    </record>
+
+      <!-- View kanban offer -->
+    <record id="competition_offer_kanban" model="ir.ui.view">
+        <field name="name">competition.offer.kanban</field>
+        <field name="model">competition.offer</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state">
+                <field name="state"/>
+                <field name="color"/>
+                <field name="active"/>
+                <field name="competition_id"/>
+                <field name="portal_employee"/>
+                <field name="message_needaction_counter"/>
+                <field name="category_professional"/>
+                <field name="date_published"/>
+                <field name="todo_benefit_count"/>
+                <field name="state_id"/>
+                <templates>
+                    <t t-name="kanban-tooltip">
+                        <ul class="oe_kanban_tooltip">
+                            <li><b>Competition:</b> <field name="competition_id"/></li>
+                            <li><b>Portal:</b> <field name="portal_employee"/></li>
+                            <li><b>Registered number:</b> <field name="registered"/></li>
+                        </ul>
+                    </t>
+                    <t t-name="kanban-box">
+                      <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_card oe_kanban_global_click oe_semantic_html_override">
+                            <div class="o_dropdown_kanban dropdown">
+                                <a class="dropdown-toggle btn" data-toggle="dropdown" href="#" >
+                                    <span class="fa fa-bars fa-lg"/>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <t t-if="widget.editable"><li><a type="edit">Edit...</a></li></t>
+                                    <t t-if="widget.deletable"><li><a type="delete">Delete</a></li></t>
+                                    <li t-if="! record.active.value"><a name="action_set_active" type="object">Unarchive</a></li>
+                                    <li t-if="record.active.value"><a name="action_set_unactive" type="object">Archive</a></li>
+                                    <li><ul class="oe_kanban_colorpicker" data-field="color"/></li>
+                                </ul>
+                            </div>
+                            <div class="oe_kanban_content">
+                                <div>
+                                    <strong><field name="name"/></strong>
+                                </div>
+                                <div class="text-muted">
+                                    <t t-if="record.category_professional.raw_value"><field name="category_professional"/><span t-if="record.brut_salary.value">,</span></t> <span t-if="record.brut_salary.value"> <field name="brut_salary"/><span t-if="record.brut_salary.value">€</span></span>
+                                </div>
+                                <div class="text-muted">
+                                    <t t-if="record.state_id.raw_value"><field name="state_id"/><span t-if="record.date_published.value">,</span></t> <span t-if="record.date_published.value"> <field name="date_published"/></span>
+                                </div>
+                                <br/>
+                                <div class="row">
+                                    <div class="col-xs-6 o_kanban_primary_left">
+                                        <div t-if="!record.note_type_contract.raw_value"><em>Type contract Unassigned</em></div>
+                                        <div t-if="record.note_type_contract.raw_value"><field name="note_type_contract"/></div>
+                                        <div t-if="!record.note_salary.raw_value"><em>Type salary Unassigned</em></div>
+                                        <div t-if="record.note_salary.raw_value"><field name="note_salary"/></div>
+                                    </div>
+                                    <div class="col-xs-6 o_kanban_primary_right">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                              <a href="#">
+                                                  Registered:
+                                              </a>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <t t-if="!record.registered.raw_value">0</t>
+                                                <t t-if="record.registered.raw_value"><field name="registered"/></t>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                 <a href="#"> Benefits:
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <t t-if="!record.todo_benefit_count.raw_value">0</t>
+                                                <t t-if="record.todo_benefit_count.raw_value"><field name="todo_benefit_count"/></t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="o_kanban_footer">
+                                    <t t-if="record.competition_id.raw_value">
+                                        <span class='oe_kanban_mail_new' title='Unread Messages'><i class='fa fa-comments'/><t t-raw="record.message_needaction_counter.raw_value"/></span>
+                                    </t>
+                                    <div>
+                                        <t t-if="record.portal_employee.raw_value"><t t-esc="record.portal_employee.value"/></t> <span>  - </span>
+                                        <img t-att-src="kanban_image('tag.competition', 'image_small', record.competition_id.raw_value)" t-att-title="record.competition_id.value" width="24" height="24" class="oe_kanban_avatar pull-right"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oe_clear"></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_competition_offer" model="ir.actions.act_window">
+        <field name="name">Offer</field>
+        <field name="res_model">competition.offer</field>
+        <field name="view_mode">kanban,tree,graph,form</field>
+        <field name="view_id" ref="competition_offer_search"/>
+        <field name="context">{'active': True}</field>
+    </record>
+
+    <!-- View Form category CNAE -->
+    <record model="ir.ui.view" id="tag_category_cnae_form">
+      <field name="name">tag.cnae.category.form</field>
+      <field name="model">tag.cnae.category</field>
+      <field name="arch" type="xml">
+        <form string="Categories CNAE">
+            <sheet>
+              <group>
+                  <group>
+                      <field name="name"/>
+                      <field name="code_cnae" required='True'/>
+                      <field name="code_general" invisible='True'/>
+                      <field name="category_ine_id" options="{'no_create':True}"/>
+                  </group>
+                  <group>
+                      <field name="parent_id" options="{'no_create':True}"/>
+                      <field name="active"/>
+                  </group>
+                  <field name="note" placeholder="Internal note..."/>
+              </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+  <!-- View Tree category CNAE -->
+    <record model="ir.ui.view" id="tag_cnae_category_tree">
+      <field name="name">tag.cnae.category.tree</field>
+      <field name="model">tag.cnae.category</field>
+      <field name="arch" type="xml">
+        <tree string="Categories CNAE">
+            <field name="name"/>
+            <field name="code_cnae"/>
+            <field name="code_general" invisible='True'/>
+            <field name="parent_id"/>
+            <field name="category_ine_id"/>
+            <field name="active"/>
+        </tree>
+      </field>
+    </record>
+
+  <!-- View search category CNAE -->
+    <record model="ir.ui.view" id="tag_cnae_category_search">
+      <field name="name">tag.cnae.category.search</field>
+      <field name="model">tag.cnae.category</field>
+      <field name="arch" type="xml">
+        <search string="Categories CNAE">
+            <field name="name"/>
+            <field name="code_cnae"/>
+            <field name="category_ine_id"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="action_tag_cnae_category" model="ir.actions.act_window">
+        <field name="name">Categories CNAE</field>
+        <field name="res_model">tag.cnae.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="tag_cnae_category_search"/>
+    </record>
+
+  <!-- View Form category INE -->
+    <record model="ir.ui.view" id="tag_ine_category_form">
+      <field name="name">tag.ine.category.form</field>
+      <field name="model">tag.ine.category</field>
+      <field name="arch" type="xml">
+        <form string="Categories INE">
+            <sheet>
+              <group>
+                  <group>
+                      <field name="name"/>
+                      <field name="code_ine" required='True'/>
+                  </group>
+                  <group>
+                      <field name="active"/>
+                  </group>
+                  <field name="note" placeholder="Internal note..."/>
+              </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+  <!-- View Tree category INE -->
+    <record model="ir.ui.view" id="tag_ine_category_tree">
+      <field name="name">tag.ine.category.tree</field>
+      <field name="model">tag.ine.category</field>
+      <field name="arch" type="xml">
+        <tree string="Categories INE">
+            <field name="name"/>
+            <field name="code_ine"/>
+            <field name="active"/>
+        </tree>
+      </field>
+    </record>
+
+  <!-- View search category INE -->
+    <record model="ir.ui.view" id="tag_ine_category_search">
+      <field name="name">tag.ine.category.search</field>
+      <field name="model">tag.ine.category</field>
+      <field name="arch" type="xml">
+        <search string="Categories CNAE">
+            <field name="name"/>
+            <field name="code_ine"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="action_tag_ine_category" model="ir.actions.act_window">
+        <field name="name">Categories INE</field>
+        <field name="res_model">tag.ine.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="tag_ine_category_search"/>
+    </record>
+
+    <menuitem name="QA Employee" id="menu_parent_learning_qa" web_icon="sale,static/description/icon.png"/>
+    <menuitem name="QA Employee" id="menu_learning_qa" sequence="1"  parent="menu_parent_learning_qa"/>
+    <menuitem name="Settings" id="menu_learning_setting" sequence="2" parent="menu_parent_learning_qa" groups="sales_team.group_sale_manager"/>
+
+    <menuitem id="menu_qa_competition_offer" sequence="1" name="Offers" parent="menu_learning_qa" action="action_competition_offer"/>
+    <menuitem id="menu_qa_competition_tag" sequence="2" name="Competitions" parent="menu_learning_qa" action="action_tag_competition"/>
+    <menuitem id="menu_qa_cnae_tag" sequence="3" name="Categories CNAE" parent="menu_learning_setting" action="action_tag_cnae_category" groups="sales_team.group_sale_manager"/>
+    <menuitem id="menu_qa_ine_tag" sequence="4" name="Categories INE" parent="menu_learning_setting" action="action_tag_ine_category" groups="sales_team.group_sale_manager"/>
+  </data>
+</odoo>

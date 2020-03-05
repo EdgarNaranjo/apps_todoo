@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tag_competition,access_tag_competition,model_tag_competition,base.group_user,1,1,1,1
+access_tag_cnae_category,access_tag_cnae_category,model_tag_cnae_category,base.group_user,1,1,1,1
+access_tag_ine_category,access_tag_ine_category,model_tag_ine_category,base.group_user,1,1,1,1
+access_competition_offer,access_competition_offer,model_competition_offer,base.group_user,1,1,1,1
