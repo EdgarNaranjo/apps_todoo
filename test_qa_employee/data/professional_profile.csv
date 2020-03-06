@@ -1,0 +1,205 @@
+code;name
+A0001;Asesor al Mando / Dirección
+A0002;Controlador Aéreo
+A0003;Experto en Seguridad en vuelo, Prevención e Investigación de Accidentes
+A0004;Mando de Unidad
+A0005;Combustibles Operador
+A0006;Operador de Instrumentación y Aviónica
+A0007;Operador Vehículos Aéreos no Tripulados (UAV)
+A0008;Piloto de Avión
+A0009;Piloto de Helicóptero
+A0010;Servicios Aeronáuticos y Aeroportuarios
+A0011;Sistemas de Navegación
+B0001;Asesor al Mando / Dirección
+B0002;Buceo y actividades acuáticas
+B0003;Mando de Unidad
+B0004;Maniobra y Navegación
+B0005;Navegación de pequeñas embarcaciones
+B0006;Operador de Robots Submarinos
+B0007;Sonarista
+B0008;Técnico en Submarinos
+C0001;Actividades de Escalada
+C0002;Actividades de Esquí
+C0003;Actividades Paracaidistas
+C0004;Artificiero Desactivador de Explosivos
+C0005;Asesor al Mando / Dirección
+C0006;Conductor Ambulancia
+C0007;Conductor Autocar
+C0008;Conductor Camión
+C0009;Conductor Mercancías Peligrosas
+C0010;Conductor Motocicleta
+C0011;Conductor Vehículo
+C0012;Conductor Vehículos Especiales
+C0013;Experto en Desminado
+C0014;Experto en Travesías de Montaña
+C0015;Mando de Unidad
+C0016;Operador de Grúa
+D0001;Astrónomo
+D0002;Criptólogo
+D0003;Estadístico
+D0004;Investigador Operativo
+D0005;Matemático
+D0006;Meteorólogo
+D0007;Oceanógrafo
+D0008;Operador de Equipos de Oceanografía
+D0009;Sistemas de Información Geográfica
+D0010;Sistemas de Información Hidrográfica
+D0011;Telemetrista
+D0012;Topógrafo / Cartógrafo
+E0001;Actividades contables
+E0002;Jefe de Contratación
+E0003;Técnico en Administración
+E0004;Técnico en Registro, Documentación y Archivo
+F0001;Albergues y Campamentos de Damnificados
+F0002;Bombero
+F0003;Coordinador de Protección Civil y Emergencias
+F0004;Estructuras Colapsadas
+F0005;Gestión control de incendios
+F0006;Gestión de Incendios Forestales
+F0007;Nadador de Rescate
+F0008;Protección NBQ y descontaminación
+F0009;Residuos Peligrosos
+F0010;Salvamento y Rescate de Naves
+F0011;Técnico en Transporte Sanitario
+F0012;Técnico Sanitario en Emergencias
+G0001;Adiestrador de perros
+G0002;Gestor de Enseñanza en Entornos Virtuales
+G0003;Monitor de Defensa Personal
+G0004;Monitor de Educación Física
+G0005;Monitor de Escuela de Conductores
+G0006;Monitor de Tiro
+G0007;Profesor de Educación Física
+G0008;Profesor de Equitación
+G0009;Profesor de Escuela de Conductores
+G0010;Profesor Técnicas Pedagógicas
+G0011;Técnico en Enseñanza en Entornos Virtuales
+H0001;Gestor de Recursos Humanos
+H0002;Mediador de Drogodependencia
+H0003;Orientador de Carrera Profesional
+H0004;Prevención en Riesgos Laborales
+I0001;Auxiliar de Cocina
+I0002;Camarero
+I0003;Cocinero
+J0001;Artes Gráficas
+J0002;Delineante
+J0003;Operador de Aplicaciones de Diseño Gráfico
+J0004;Operador de Equipo de Imagen y Sonido
+K0001;Arquitecto
+K0002;Ingeniero Aeronáutico
+K0003;Ingeniero Agrónomo
+K0004;Ingeniero de Armamento
+K0005;Ingeniero de Armas Navales
+K0006;Ingeniero de Caminos Canales y Puertos
+K0007;Ingeniero de Construcción
+K0008;Ingeniero de Infraestructuras
+K0009;Ingeniero de Materiales
+K0010;Ingeniero de Minas
+K0011;Ingeniero de Montes
+K0012;Ingeniero de Organización Industrial
+K0013;Ingeniero de Sistemas de Defensa
+K0014;Ingeniero de Telecomunicaciones
+K0015;Ingeniero de Telecomunicaciones y Electrónica
+K0016;Ingeniero Electrónico
+K0017;Ingeniero en Automática y Electrónica Industrial
+K0018;Ingeniero Geodesta
+K0019;Ingeniero Hidrógrafo
+K0020;Ingeniero Industrial
+K0021;Ingeniero Informático
+K0022;Ingeniero Mecánico
+K0023;Ingeniero Naval y Oceánico
+K0024;Ingeniero Químico
+K0025;Ingeniero Técnico Aeroespacial
+K0026;Proyectista / Director obra civil
+L0001;Especialista en Operaciones Psicológicas
+L0002;Fotointerpretador y Analista de Imágenes
+L0003;Señales Acústicas, ópticas y digitales
+M0001;Auditor
+M0002;Interventor
+M0003;Jefe Oficina de Programa
+N0001;Gestor en Sistemas Logísticos
+N0002;Gestor Infraestructuras y Recursos Patrimoniales
+N0003;Mantenimiento de Equipos y Subsistencias
+P0001;Albañil
+P0002;Carpintero
+P0003;Electricista
+P0004;Fontanero
+P0005;Jardinero
+P0006;Mantenimiento de Instalaciones
+P0007;Mantenimiento Equipos Climatización
+P0008;Metalúrgico
+P0009;Pintor
+Q0001;Chapista Vehículos
+Q0002;Electricista de Vehículos
+Q0003;Electrónico de Vehículos
+Q0004;Fresador
+Q0005;Guarnicionero
+Q0006;Mantenimiento Ajustador Máquinas y Herramientas
+Q0007;Mantenimiento Chapa y Pintura
+Q0008;Mantenimiento de Aeronaves
+Q0009;Mantenimiento de Energía y Propulsión (Máquinas de Buques)
+Q0010;Mantenimiento de Instrumentación y Aviónica
+Q0011;Mantenimiento de Mecánica
+Q0012;Mantenimiento de Naves
+Q0013;Mantenimiento de Sistemas Electrónicos
+Q0014;Mantenimiento de Vehículos
+Q0015;Mantenimiento de Vehículos Aéreos no Tripulados (UAV)
+Q0016;Mantenimiento Equipos Energía Planta Fija
+Q0017;Mantenimiento Equipos Hidrográficos
+Q0018;Mantenimiento Equipos Inmersión
+Q0019;Mantenimiento Equipos Sonar
+Q0020;Mantenimiento Grupos Electrógenos
+Q0021;Mantenimiento Sistemas Eléctricos
+Q0022;Mantenimiento Terminales Satélites
+Q0023;Mantenimiento y Montaje de Equipos
+Q0024;Mecánico de Armas
+Q0025;Mecánico de Vehículos
+Q0026;Reparaciones Submarinas
+Q0027;Soldador
+R0001;Auditor de Sistemas de Gestión Medioambiental
+R0002;Experto en Eficiencia Energética
+R0003;Gestión Medioambiental
+S0001;Director / Subdirector Músico
+S0002;Músico Instrumentista
+T0001;Auxiliar Psicólogo
+T0002;Psicólogo
+T0003;Sociólogo
+U0001;Experto en Relaciones Internacionales
+U0002;Oficina de Información Pública
+V0001;Auxiliar de Farmacia
+V0002;Auxiliar de laboratorio
+V0003;Ayudante de Clínica
+V0004;Enfermero
+V0005;Farmacéutico
+V0006;Médico
+V0007;Sanitario
+V0008;Técnico en Laboratorio
+V0009;Veterinario
+W0001;Analista de Inteligencia
+W0002;Auditor de Seguridad
+W0003;Ciberseguridad
+W0004;Custodia, Transporte y Aprovisionamiento Explosivos
+W0005;Director / Jefe de Seguridad
+W0006;Guía de perros Detectores de Minas / Explosivos
+W0007;Operaciones Especiales
+W0008;Protección de Buques y Puertos
+W0009;Protección y Escolta de Autoridades
+W0010;Seguridad de Infraestructuras Críticas
+W0011;Vigilante / Agente de Seguridad
+X0001;Jurídico
+Y0001;Fotógrafo
+Y0002;Gestión / Administración Sistemas de Comunicaciones
+Y0003;Guerra Electrónica
+Y0004;Mantenimiento Sistemas Informáticos
+Y0005;Operador y Programador de Sistemas de Gestión
+Y0006;Productor de Recursos Multimedia
+Y0007;Radarista
+Y0008;Sistemas y Redes Informáticas
+Z0001;Administrador / Configurador de Sistemas Radio
+Z0002;Administrador / Configurador de Terminales Satélite
+Z0003;Administrador / Gestor de Sistemas de Telefonía
+Z0004;Administrador de Gestores de Ancho de Banda
+Z0005;Instalador de telecomunicaciones
+Z0006;Mantenimiento de Comunicaciones y Sistemas de Información
+Z0007;Mantenimiento de Sistemas Conmutación y Transmisión Digital
+Z0008;Mantenimiento Sistemas de Telecomunicaciones
+Z0009;Operador Equipos transmisiones
