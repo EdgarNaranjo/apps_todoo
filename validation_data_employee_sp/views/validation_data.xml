@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+
+    <!-- View Form Inherit Employee-->
+    <record model="ir.ui.view" id="view_contract_hr_employee_validate_form_inherit">
+        <field name="name">contract.hr.employee.validate.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="management_contract.view_contract_hr_employee_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_ids']" position="after">
+                <field name="empl_ett" invisible="True"/>
+            </xpath>
+            <xpath expr="//field[@name='identification_id']" position="before">
+                <field name="document_type" attrs="{'invisible': [('empl_ett', '=', False)], 'required': [('empl_ett', '=', True)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='bank_account_id']" position="before">
+                <field name="iban" attrs="{'invisible': [('empl_ett', '=', False)], 'required': [('empl_ett', '=', True)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='identification_id']" position="attributes">
+                <attribute name="attrs">{'required': [('document_type', 'in', ['dni', 'nie'])]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='passport_id']" position="attributes">
+                <attribute name="attrs">{'required': [('document_type', '=', 'pass')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='bank_account_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+         </field>
+    </record>
+  </data>
+</odoo>
