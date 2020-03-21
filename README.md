@@ -29,6 +29,18 @@ Modify Design List View for all views tree. List Sticky Header.
    3. List Sticky Header
    4. Hover property of list
 
+# HR Contract Management (versión 10.0.0.0.1)
+
+Contract Management. Report contract. Review the status of a Contract. Generate contract from Sale Order/ Product (type=Service).
+
+ * versión 10.0.0.0.1
+   
+   1. Generate contract from Sale Order with Product od type "Service"
+   2. Management Contract, Employee
+   3. Management Agreement
+   4. Workflow of contract and sale order
+   5. Management professional category, Educational level, Jobs
+
 
 
 Para más información dirigirse al portal: https://github.com/todooweb
