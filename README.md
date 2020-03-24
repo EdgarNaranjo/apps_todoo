@@ -40,7 +40,7 @@ Contract Management. Report contract. Review the status of a Contract. Generate 
    4. Workflow of contract and sale order
    5. Management professional category, Educational level, Jobs
 
-# Validation Data Employee european (SP) (versión 10.0.0.0.1)
+# HR Employee Validation Data  european (SP) (versión 10.0.0.0.1)
 
 Validation Data Employee: DNI/NIE, Code INEN/SS, IBAN for model Europe, Spain (SP).
 
