@@ -15,7 +15,6 @@ Measure the reliability index of a company and the job offers they publish and o
  * versión 10.1.0.1.2
    
    1. Add model list for import (professional_profile, list_cnae, list_ine)
-   
    2. Add data category_partner
    
 # Modify Design List View (versión 10.0.0.0.1)
