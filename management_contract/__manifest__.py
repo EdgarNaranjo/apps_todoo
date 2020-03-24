@@ -20,7 +20,7 @@
 #
 ###############################################################################
 {
-    'name': "Contract Management",
+    'name': "HR Contract Management",
     'summary': """HR Contract Management""",
     'description': """Contract Management. Report contract. Review the status of a Contract. Generate contract from Sale Order/ Product (type=Service).
     """,
