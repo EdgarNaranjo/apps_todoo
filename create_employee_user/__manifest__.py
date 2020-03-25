@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    This module you will Follow flow contract. Report contract. Review the status of a Contract.
-#    Check the Contract List. Management Employee, Agreement.
-#    Generate contract from Sale Order/ Product (type=Service).
+#    This module you will create of the system user and contact from HR Employee
 #    It will process the data entered and return a message indicating whether
 #    the company is eligible or not.
 #
@@ -20,11 +18,11 @@
 #
 ###############################################################################
 {
-    'name': "HR Employee Validation Data",
-    'summary': """HR Employee Validation Data european (SP)""",
-    'description': """Validation Data Employee: DNI/NIE. Validation IBAN. Code INEN/SS for model Europe, Spain (SP).
+    'name': "HR Employee to system user",
+    'summary': """HR Employee to system user with automatics task""",
+    'description': """Creation of the system user and contact from HR Employee with automatics task.
     """,
-    'version': '10.2.0.0.2',
+    'version': '10.0.0.0.1',
     'category': 'Human Resources',
     'license': 'LGPL-3',
     'author': "ToDOO (www.todooweb.es)",
@@ -46,10 +44,11 @@
         'management_contract'
     ],
     'data': [
-        'views/validation_data.xml',
+        'views/employee_user.xml',
+        'data/create_user_data.xml',
     ],
     'images': [
-        'static/description/screenshot_validation.png'
+        'static/description/screenshot_user.png'
     ],
     'installable': True,
     'application': False,

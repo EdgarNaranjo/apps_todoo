@@ -40,7 +40,7 @@ Contract Management. Report contract. Review the status of a Contract. Generate 
    4. Workflow of contract and sale order
    5. Management professional category, Educational level, Jobs
 
-# HR Employee Validation Data  european (SP) (versión 10.2.0.0.1)
+# HR Employee Validation Data  european (SP) (versión 10.2.0.0.2)
 
 Validation Data Employee: DNI/NIE, Code INEN/SS, IBAN for model Europe, Spain (SP).
 
@@ -55,6 +55,22 @@ Validation Data Employee: DNI/NIE, Code INEN/SS, IBAN for model Europe, Spain (S
 
    1. Validate birth date
    2. Validate the age of an employee
+
+* versión 10.2.0.0.2
+
+   1. Fix validate birth date
+   2. Fix validate the age of an employee
+
+# HR Employee to system user (versión 10.0.0.0.1)
+
+Creation of the system user and contact from HR Employee with automatics task.
+
+ * versión 10.0.0.0.1
+   
+   1. Validate email
+   2. The automatics task generate an user
+   3. The automatics task generate and contact
+   4. To asociated boths with employee
    
 
 Para más información dirigirse al portal: https://github.com/todooweb
