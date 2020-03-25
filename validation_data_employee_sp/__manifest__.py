@@ -24,7 +24,7 @@
     'summary': """HR Employee Validation Data european (SP)""",
     'description': """Validation Data Employee: DNI/NIE. Validation IBAN. Code INEN/SS for model Europe, Spain (SP).
     """,
-    'version': '10.0.0.1.1',
+    'version': '10.2.0.0.1',
     'category': 'Human Resources',
     'license': 'LGPL-3',
     'author': "ToDOO (www.todooweb.es)",

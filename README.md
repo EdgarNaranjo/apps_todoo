@@ -40,7 +40,7 @@ Contract Management. Report contract. Review the status of a Contract. Generate 
    4. Workflow of contract and sale order
    5. Management professional category, Educational level, Jobs
 
-# HR Employee Validation Data  european (SP) (versión 10.0.0.0.1)
+# HR Employee Validation Data  european (SP) (versión 10.2.0.0.1)
 
 Validation Data Employee: DNI/NIE, Code INEN/SS, IBAN for model Europe, Spain (SP).
 
@@ -50,6 +50,11 @@ Validation Data Employee: DNI/NIE, Code INEN/SS, IBAN for model Europe, Spain (S
    2. Validate DNI / NIE
    3. Validate personal data as mobile, Social security number
    4. Validate birth date
+
+* versión 10.2.0.0.1
+
+   1. Validate birth date
+   2. Validate the age of an employee
    
 
 Para más información dirigirse al portal: https://github.com/todooweb
