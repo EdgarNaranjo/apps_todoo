@@ -36,6 +36,7 @@ class HrEmployee(models.Model):
         ('dni', 'DNI'),
         ('nie', 'NIE'),
         ('pass', 'Passport')], 'Type document', track_visibility='onchange')
+    age = fields.Integer('Age')
 
     @api.model
     def create(self, vals):
@@ -92,6 +93,9 @@ class HrEmployee(models.Model):
                         account_id.create({'acc_number': iban})
                 else:
                     raise UserError(_('Verify the IBAN number, does not look as correct'))
+            datetime_obj = datetime.strptime(vals.get('birthday'), '%Y-%m-%d').date()
+            if (date.today() - datetime_obj).days > 31025 or datetime_obj >= date.today():
+                raise UserError(_('Take a look over the Birthday date, does not look correct'))
         sup = super(HrEmployee, self).create(vals)
         return sup
 
@@ -146,5 +150,16 @@ class HrEmployee(models.Model):
                 validation = verify_iban(iban)
                 if not validation:
                     raise UserError(_('Verify the IBAN number, does not look as correct'))
+            datetime_obj = datetime.strptime(vals.get('birthday'), '%Y-%m-%d').date()
+            if (date.today() - datetime_obj).days > 31025 or datetime_obj >= date.today():
+                raise UserError(_('Take a look over the Birthday date, does not look correct'))
         sup = super(HrEmployee, self).write(vals)
         return sup
+
+    @api.onchange('birthday')
+    def onchange_age(self):
+        for obj_contract in self:
+            if obj_contract.birthday:
+                date_birthday = obj_contract.birthday.split('-')
+                date_birthday = date_birthday[0]
+                obj_contract.age = date.today().year - int(date_birthday)

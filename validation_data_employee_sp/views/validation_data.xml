@@ -10,6 +10,9 @@
             <xpath expr="//field[@name='category_ids']" position="after">
                 <field name="empl_ett" invisible="True"/>
             </xpath>
+            <xpath expr="//field[@name='birthday']" position="after">
+                <field name="age" attrs="{'invisible': [('empl_ett', '=', False)]}"/>
+            </xpath>
             <xpath expr="//field[@name='identification_id']" position="before">
                 <field name="document_type" attrs="{'invisible': [('empl_ett', '=', False)], 'required': [('empl_ett', '=', True)]}"/>
             </xpath>
