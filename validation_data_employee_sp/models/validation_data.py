@@ -161,7 +161,9 @@ class HrEmployee(models.Model):
     @api.onchange('birthday')
     def onchange_age(self):
         for obj_contract in self:
+            age = ''
             if obj_contract.birthday:
-                date_birthday = obj_contract.birthday.split('-')
-                date_birthday = date_birthday[0]
-                obj_contract.age = date.today().year - int(date_birthday)
+                dob = datetime.strptime(obj_contract.birthday, '%Y-%m-%d')
+                today = date.today()
+                age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+            obj_contract.age = int(age)
