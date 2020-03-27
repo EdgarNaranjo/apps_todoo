@@ -202,6 +202,9 @@ class CollectiveAgreement(models.Model):
     _order = 'create_date desc'
 
     name = fields.Char('Number', index=True, required=True)
+    code = fields.Char(required=True, copy=False)
+    partner_id = fields.Many2one('res.partner', string='Partner', ondelete='restrict', domain=[('parent_id', '=', False)])
+    company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get())
     contract_hours = fields.Char('Contract hours')
     net_salary = fields.Float('Salary net')
     brut_salary = fields.Float('Salary brut')
@@ -210,9 +213,36 @@ class CollectiveAgreement(models.Model):
     cotization_id = fields.Many2one('formation.cotization.group', 'Cotization group', track_visibility='onchange', index=True)
     educational_level_id = fields.Many2one('formation.educational.level', 'Educational level', track_visibility='onchange', index=True)
     formation_job_id = fields.Many2one('formation.job', 'Job', track_visibility='onchange', index=True)
-    tag_cnae_id = fields.Many2one('tag.cnae.category', string='CNAE', index=True, track_visibility='onchange', help='Groups CNAE.')
+    tag_cnae_id = fields.Many2one('tag.cnae.category', 'CNAE', index=True, track_visibility='onchange', help='Groups CNAE.')
     sector_cnae = fields.Many2one('tag.ine.category', 'Sector', track_visibility='onchange')
     attachment_ids = fields.Many2many('ir.attachment', 'attact_efirm_rel', 'efirm_id', 'attach_id', ondelete="cascade", string='Attachments')
+    term_description = fields.Html('Term description')
+    is_template = fields.Boolean("Is a Template?", default=False, copy=False, help="Set if the agreement is a template. Template agreements don't require a partner.")
+    agreement_id = fields.Many2one('collective.agreement', 'Collective agreement', track_visibility='onchange', index=True)
+    type_id = fields.Many2one('agreement.type', 'Agreement type', track_visibility='onchange', index=True)
+    active = fields.Boolean(default=True)
+    signature_date = fields.Date()
+    start_date = fields.Date()
+    end_date = fields.Date()
+
+    def name_get(self):
+        res = []
+        for agr in self:
+            name = agr.name
+            if agr.code:
+                name = '[%s] %s' % (agr.code, agr.name)
+            res.append((agr.id, name))
+        return res
+
+    _sql_constraints = [('code_partner_company_unique', 'unique(code, partner_id, company_id)', 'This agreement code already exists for this partner!')]
+
+
+class AgreementType(models.Model):
+    _name = "agreement.type"
+    _description = "Agreement Types"
+
+    name = fields.Char(string="Name", required=True)
+    active = fields.Boolean(default=True)
 
 
 class TagCategoryCNAE(models.Model):

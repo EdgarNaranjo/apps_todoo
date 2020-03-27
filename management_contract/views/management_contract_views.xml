@@ -439,32 +439,45 @@
       <field name="arch" type="xml">
         <form string="Collective Agreement">
             <sheet>
+            <div class="oe_button_box" name="button_box">
+                <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                    <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                </button>
+            </div>
             <div class="oe_title">
                 <label for="name" class="oe_edit_only"/>
                 <h1><field name="name" placeholder="Document Name" required="True"/></h1>
             </div>
             <group>
                 <group name="credentials">
+                    <field name="code"/>
+                    <field name="type_id" options="{'no_create':True}"/>
+                    <field name="partner_id" options="{'no_create':True}"/>
                     <field name="contract_hours" required="True"/>
                     <field name="net_salary" required="True"/>
                     <field name="brut_salary"/>
+                    <field name="is_template"/>
                 </group>
                 <group name="clients">
-                    <field name="category_professional_id" required="True"/>
-                    <field name="cotization_id" required="True"/>
-                    <field name="educational_level_id" required="True"/>
-                    <field name="formation_job_id" required="True"/>
+                    <field name="agreement_id" attrs="{'invisible': [('is_template', '!=', True)], 'required': [('is_template', '=', True)]}" options="{'no_create':True}"/>
+                    <field name="category_professional_id" required="True" options="{'no_create':True}"/>
+                    <field name="cotization_id" required="True" options="{'no_create':True}"/>
+                    <field name="educational_level_id" required="True" options="{'no_create':True}"/>
+                    <field name="formation_job_id" required="True" options="{'no_create':True}"/>
+                    <field name="company_id" options="{'no_create':True}"/>
                 </group>
                 <group name="others">
-                    <field name="tag_cnae_id"/>
-                    <field name="sector_cnae"/>
+                    <field name="signature_date"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="tag_cnae_id" options="{'no_create':True}"/>
+                    <field name="sector_cnae" options="{'no_create':True}"/>
                 </group>
             </group>
             <notebook>
-                <page string="Data Agreement">
-                    <group name="others">
-                        <field name="description" placeholder=".....Description"/>
-                    </group>
+                <page string="Terms &amp; Condition">
+                    <field name="term_description"/>
+                    <br/>
                     <field name="attachment_ids" widget="many2many_binary"/>
                 </page>
             </notebook>
@@ -484,11 +497,13 @@
       <field name="arch" type="xml">
         <tree string="Collective Agreement">
             <field name="name"/>
+            <field name="code"/>
+            <field name="signature_date"/>
+            <field name="start_date"/>
+            <field name="end_date"/>
             <field name="tag_cnae_id"/>
             <field name="sector_cnae"/>
             <field name="contract_hours"/>
-            <field name="net_salary"/>
-            <field name="brut_salary"/>
             <field name="category_professional_id"/>
             <field name="cotization_id"/>
             <field name="educational_level_id"/>
@@ -496,6 +511,34 @@
         </tree>
       </field>
     </record>
+
+    <record id="collective_agreement_search" model="ir.ui.view">
+    <field name="name">collective.agreement.search</field>
+    <field name="model">collective.agreement</field>
+    <field name="arch" type="xml">
+        <search string="Collective Agreement">
+            <field name="name" filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]" string="Name or Number"/>
+            <field name="partner_id"/>
+            <field name="code"/>
+            <field name="signature_date"/>
+            <field name="start_date"/>
+            <field name="end_date"/>
+            <field name="tag_cnae_id"/>
+            <field name="sector_cnae"/>
+            <field name="contract_hours"/>
+            <field name="category_professional_id"/>
+            <field name="cotization_id"/>
+            <field name="educational_level_id"/>
+            <field name="formation_job_id"/>
+            <separator/>
+            <filter name="inactive" string="Archived" domain="[('active', '=', False)]"/>
+            <group name="groupby">
+                <filter name="partner_groupby" string="Partner" context="{'group_by': 'partner_id'}"/>
+                <filter name="signature_date_groupby" string="Signature Date" context="{'group_by': 'signature_date'}"/>
+            </group>
+        </search>
+    </field>
+</record>
 
       <!-- View Form category CNAE -->
     <record model="ir.ui.view" id="tag_category_cnae_form">
@@ -605,6 +648,58 @@
       </field>
     </record>
 
+      <!-- Agreement Type List View-->
+    <record model="ir.ui.view" id="agreement_type_list_view">
+        <field name="name">Agreement Type List</field>
+        <field name="model">agreement.type</field>
+        <field name="arch" type="xml">
+            <tree string="Agreement Types" default_order="name">
+                <field name="name" string="Type Name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Agreement Type Form View -->
+    <record model="ir.ui.view" id="agreement_type_form_view">
+        <field name="name">Agreement Type Form</field>
+        <field name="model">agreement.type</field>
+        <field name="arch" type="xml">
+            <form string="Agreement Type">
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object"
+                            class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button"
+                               options='{"terminology": "archive"}'/>
+                    </button>
+                </div>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="agreement_type_search" model="ir.ui.view">
+        <field name="name">agreement.type.search</field>
+        <field name="model">agreement.type</field>
+        <field name="arch" type="xml">
+            <search string="Agreement Type">
+                <field name="name"/>
+                <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Actions opening views on models -->
+    <record model="ir.actions.act_window" id="agreement_type_action">
+        <field name="name">Agreement Types</field>
+        <field name="res_model">agreement.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id="action_tag_ine_category" model="ir.actions.act_window">
         <field name="name">Categories INE</field>
         <field name="res_model">tag.ine.category</field>
@@ -640,11 +735,17 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-      <!--Action Educational L-->
+      <!--Action Agreement-->
     <record id="action_collective_agreement" model="ir.actions.act_window">
         <field name="name">Collective Agreement</field>
+        <field name="view_type">form</field>
         <field name="res_model">collective.agreement</field>
         <field name="view_mode">tree,form</field>
+        <field name="view_ids"
+            eval="[(5, 0, 0),
+                  (0, 0, {'view_mode': 'tree', 'view_id': ref('collective_agreement_tree')}),
+                  (0, 0, {'view_mode': 'form', 'view_id': ref('collective_agreement_form')})]"/>
+        <field name="search_view_id" ref="collective_agreement_search"/>
     </record>
 
     <record id="sale_view_order_form_inherit" model="ir.ui.view">
@@ -695,6 +796,7 @@
     <menuitem name="Job" id="menulist_formation_job" sequence="5" parent="management_contract_menu_root_settings"  action="action_formation_job"/>
     <menuitem name="Categories CNAE" id="menu_qa_cnae_tag" sequence="6" parent="management_contract_menu_root_settings" action="action_tag_cnae_category"/>
     <menuitem name="Categories INE" id="menu_qa_ine_tag" sequence="7" parent="management_contract_menu_root_settings" action="action_tag_ine_category"/>
+    <menuitem name="Agreement Type" id="menu_qa_agreement_type" sequence="8" parent="management_contract_menu_root_settings" action="agreement_type_action"/>
     <menuitem name="Settings (Premium)" id="menulist_menu_settings" sequence="100" parent="management_contract_menu_root_settings" action="action_formation_category_professional"/>
   </data>
 </odoo>
