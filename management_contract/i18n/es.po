@@ -6,19 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0-20190207\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-21 03:31+0000\n"
-"PO-Revision-Date: 2020-03-21 03:31+0000\n"
+"POT-Creation-Date: 2020-03-26 16:54+0000\n"
+"PO-Revision-Date: 2020-03-26 16:54+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: management_contract
-#: model:ir.ui.view,arch_db:management_contract.collective_agreement_form
-msgid ".....Description"
-msgstr ".....Descripción"
 
 #. module: management_contract
 #: model:ir.ui.view,arch_db:management_contract.sale_view_order_form_inherit
@@ -36,6 +31,7 @@ msgid "Accommodation"
 msgstr "Alojamiento"
 
 #. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_active
 #: model:ir.model.fields,field_description:management_contract.field_tag_cnae_category_active
 #: model:ir.model.fields,field_description:management_contract.field_tag_ine_category_active
 msgid "Active"
@@ -45,6 +41,31 @@ msgstr "Activo"
 #: selection:hr.contract,ctt_assumption:0
 msgid "Acumulation"
 msgstr "Acumulación"
+
+#. module: management_contract
+#: model:ir.ui.menu,name:management_contract.menu_qa_agreement_type
+#: model:ir.ui.view,arch_db:management_contract.agreement_type_form_view
+#: model:ir.ui.view,arch_db:management_contract.agreement_type_search
+msgid "Agreement Type"
+msgstr "Tipo de Acuerdo"
+
+#. module: management_contract
+#: model:ir.actions.act_window,name:management_contract.agreement_type_action
+#: model:ir.model,name:management_contract.model_agreement_type
+#: model:ir.ui.view,arch_db:management_contract.agreement_type_list_view
+msgid "Agreement Types"
+msgstr "Tipos de Acuerdo"
+
+#. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_type_id
+msgid "Agreement type"
+msgstr "Tipo de Acuerdo"
+
+#. module: management_contract
+#: model:ir.ui.view,arch_db:management_contract.agreement_type_search
+#: model:ir.ui.view,arch_db:management_contract.collective_agreement_search
+msgid "Archived"
+msgstr "Archivado"
 
 #. module: management_contract
 #: model:ir.model.fields,field_description:management_contract.field_hr_contract_ctt_assumption
@@ -137,6 +158,7 @@ msgid "Client"
 msgstr "Cliente"
 
 #. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_code
 #: model:ir.model.fields,field_description:management_contract.field_tag_cnae_category_code_cnae
 #: model:ir.model.fields,field_description:management_contract.field_tag_ine_category_code_ine
 msgid "Code"
@@ -163,14 +185,21 @@ msgstr "código de la categoría de trabajo SEPE"
 #: model:ir.model.fields,field_description:management_contract.field_sale_order_agreement_id
 #: model:ir.ui.menu,name:management_contract.menulist_collective_agreement
 #: model:ir.ui.view,arch_db:management_contract.collective_agreement_form
+#: model:ir.ui.view,arch_db:management_contract.collective_agreement_search
 #: model:ir.ui.view,arch_db:management_contract.collective_agreement_tree
 msgid "Collective Agreement"
 msgstr "Convenio colectivo"
 
 #. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_agreement_id
 #: model:ir.model.fields,field_description:management_contract.field_hr_contract_agreement_id
 msgid "Collective agreement"
 msgstr "Convenio colectivo"
+
+#. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_company_id
+msgid "Company"
+msgstr "Compañía"
 
 #. module: management_contract
 #: model:ir.model,name:management_contract.model_hr_contract
@@ -279,11 +308,6 @@ msgid "DNI/NIE/Pas."
 msgstr "DNI/NIE/Pas."
 
 #. module: management_contract
-#: model:ir.ui.view,arch_db:management_contract.collective_agreement_form
-msgid "Data Agreement"
-msgstr "Datos convenio"
-
-#. module: management_contract
 #: model:ir.model.fields,help:management_contract.field_hr_contract_registration_date
 msgid "Date of registration of the contract"
 msgstr "Fecha de registro del contrato."
@@ -363,9 +387,14 @@ msgid "Employees"
 msgstr "Empleados"
 
 #. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_end_date
+msgid "End date"
+msgstr "Fecha fin"
+
+#. module: management_contract
 #: model:ir.model.fields,field_description:management_contract.field_hr_employee_date_last_b
 msgid "Feha baja"
-msgstr "Feha baja"
+msgstr "Fecha baja"
 
 #. module: management_contract
 #: model:ir.model.fields,field_description:management_contract.field_hr_contract_food
@@ -418,6 +447,11 @@ msgstr "INE"
 #: model:ir.ui.view,arch_db:management_contract.tag_ine_category_form
 msgid "Internal note..."
 msgstr "Nota Interna..."
+
+#. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_is_template
+msgid "Is a Template?"
+msgstr "Es una plantilla?"
 
 #. module: management_contract
 #: model:ir.actions.act_window,name:management_contract.action_formation_job
@@ -511,6 +545,11 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: management_contract
+#: model:ir.ui.view,arch_db:management_contract.collective_agreement_search
+msgid "Name or Number"
+msgstr "Nombre o Codigo"
+
+#. module: management_contract
 #: model:ir.model.fields,field_description:management_contract.field_hr_contract_nature
 msgid "Nature Of Work"
 msgstr "Naturaleza del trabajo"
@@ -569,6 +608,8 @@ msgstr "Padre"
 
 #. module: management_contract
 #: model:ir.model,name:management_contract.model_res_partner
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_partner_id
+#: model:ir.ui.view,arch_db:management_contract.collective_agreement_search
 msgid "Partner"
 msgstr "Empresa"
 
@@ -671,6 +712,11 @@ msgid "Set draft"
 msgstr "Poner en borrador"
 
 #. module: management_contract
+#: model:ir.model.fields,help:management_contract.field_collective_agreement_is_template
+msgid "Set if the agreement is a template. Template agreements don't require a partner."
+msgstr "Establecer si el acuerdo es una plantilla. Los acuerdos de plantilla no requieren un partner"
+
+#. module: management_contract
 #: model:ir.ui.menu,name:management_contract.management_contract_menu_root_settings
 msgid "Settings"
 msgstr "Configuración"
@@ -679,6 +725,21 @@ msgstr "Configuración"
 #: model:ir.ui.menu,name:management_contract.menulist_menu_settings
 msgid "Settings (Premium)"
 msgstr "Configuración (Premium)"
+
+#. module: management_contract
+#: model:ir.ui.view,arch_db:management_contract.collective_agreement_search
+msgid "Signature Date"
+msgstr "Fecha firma"
+
+#. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_signature_date
+msgid "Signature date"
+msgstr "Fecha firma"
+
+#. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_start_date
+msgid "Start date"
+msgstr "Fecha inicio"
 
 #. module: management_contract
 #: model:ir.ui.view,arch_db:management_contract.hr_management_contract_view_search
@@ -697,6 +758,11 @@ msgid "Team"
 msgstr "Equipo"
 
 #. module: management_contract
+#: model:ir.model.fields,field_description:management_contract.field_collective_agreement_term_description
+msgid "Term description"
+msgstr "Description terminos"
+
+#. module: management_contract
 #: model:ir.model.fields,field_description:management_contract.field_hr_contract_termination_date
 msgid "Termination"
 msgstr "Terminación"
@@ -705,6 +771,11 @@ msgstr "Terminación"
 #: model:ir.model.fields,field_description:management_contract.field_hr_contract_termination_finger
 msgid "Termination finger"
 msgstr "Huella baja"
+
+#. module: management_contract
+#: model:ir.ui.view,arch_db:management_contract.collective_agreement_form
+msgid "Terms & Condition"
+msgstr "Terminos & Condiciones"
 
 #. module: management_contract
 #: selection:hr.contract,termination_cause:0
@@ -729,13 +800,18 @@ msgid "The termination date the contract or finish cannot be empty."
 msgstr "La fecha de finalización del contrato o finalización no puede estar vacía"
 
 #. module: management_contract
-#: code:addons/management_contract/models/management_contract.py:372
+#: code:addons/management_contract/models/management_contract.py:402
 #, python-format
 msgid "There are no employees available to hire. You can contact your manager or open a new recruitment process."
 msgstr "No hay empleados disponibles para contratar. Puede contactar a su gerente o abrir un nuevo proceso de contratación."
 
 #. module: management_contract
-#: code:addons/management_contract/models/management_contract.py:333
+#: sql_constraint:collective.agreement:0
+msgid "This agreement code already exists for this partner!"
+msgstr "¡Este código de acuerdo ya existe para este socio!"
+
+#. module: management_contract
+#: code:addons/management_contract/models/management_contract.py:363
 #, python-format
 msgid "To create a contract you must review the delivered quantity of your order lines."
 msgstr "Para crear un contrato, debe revisar la cantidad entregada de sus líneas de pedido."
@@ -749,6 +825,11 @@ msgstr "Transporte"
 #: model:ir.model.fields,field_description:management_contract.field_hr_contract_type_doc
 msgid "Type Document"
 msgstr "Tipo documento"
+
+#. module: management_contract
+#: model:ir.ui.view,arch_db:management_contract.agreement_type_list_view
+msgid "Type Name"
+msgstr "Tipo"
 
 #. module: management_contract
 #: model:ir.ui.view,arch_db:management_contract.hr_management_contract_view_form

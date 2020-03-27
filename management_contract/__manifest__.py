@@ -24,7 +24,7 @@
     'summary': """HR Contract Management""",
     'description': """Contract Management. Report contract. Review the status of a Contract. Generate contract from Sale Order/ Product (type=Service).
     """,
-    'version': '10.0.0.1.1',
+    'version': '10.1.0.1.1',
     'category': 'Human Resources',
     'license': 'LGPL-3',
     'author': "ToDOO (www.todooweb.es)",

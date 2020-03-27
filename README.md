@@ -28,7 +28,7 @@ Modify Design List View for all views tree. List Sticky Header.
    3. List Sticky Header
    4. Hover property of list
 
-# HR Contract Management (versión 10.0.0.0.1)
+# HR Contract Management (versión 10.1.0.1.1)
 
 Contract Management. Report contract. Review the status of a Contract. Generate contract from Sale Order/ Product (type=Service).
 
@@ -39,6 +39,11 @@ Contract Management. Report contract. Review the status of a Contract. Generate 
    3. Management Agreement
    4. Workflow of contract and sale order
    5. Management professional category, Educational level, Jobs
+
+* versión 10.1.0.1.1
+
+   1. Add Agreement type
+   2. Modified Collective Agreement
 
 # HR Employee Validation Data  european (SP) (versión 10.2.0.0.2)
 
@@ -71,7 +76,7 @@ Creation of the system user and contact from HR Employee with automatics task.
    2. The automatics task generate an user
    3. The automatics task generate and contact
    4. To asociated boths with employee
-   
+
 
 Para más información dirigirse al portal: https://github.com/todooweb
 
