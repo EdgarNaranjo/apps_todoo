@@ -20,8 +20,8 @@
 #
 ###############################################################################
 {
-    'name': "HR Employee Validation Data",
-    'summary': """HR Employee Validation Data european (SP)""",
+    'name': "HR Employee Documents Validation",
+    'summary': """HR Employee Documents Validation Data european (SP)""",
     'description': """Validation Data Employee: DNI/NIE. Validation IBAN. Code INEN/SS for model Europe, Spain (SP).
     """,
     'version': '10.2.0.0.2',
