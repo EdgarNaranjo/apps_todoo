@@ -144,7 +144,7 @@ class HrEmployee(models.Model):
     irpf_cuote = fields.Float('Quote IRPF', help='Quote IRPF')
     irpf_base = fields.Float('Base IRPF', help='Base IRPF')
     irpf_personal = fields.Float('Personal IRPF', help='Min personal IRPF')
-    date_last_b = fields.Date('Feha baja', help='Last date', default=fields.Datetime.now)
+    date_last_b = fields.Date('Fecha baja', help='Last date')
     category_professional_id = fields.Many2one('formation.category.professional', 'Professional category', track_visibility='onchange', index=True)
     cotization_id = fields.Many2one('formation.cotization.group', 'Cotization group', track_visibility='onchange', index=True)
     educational_level_id = fields.Many2one('formation.educational.level', 'Educational level', track_visibility='onchange', index=True)

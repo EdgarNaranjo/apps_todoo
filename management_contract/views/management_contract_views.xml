@@ -302,7 +302,6 @@
         <field name="context">{'empl_ett': False}</field>
         <field name="domain">[('empl_ett', '=', False)]</field>
     </record>
-      
 
        <!-- View Form Category P -->
     <record model="ir.ui.view" id="formation_category_professional_form">
