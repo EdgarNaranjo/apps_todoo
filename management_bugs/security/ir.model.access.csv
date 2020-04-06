@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_management_bug,access_management_bug,model_management_bug,base.group_user,1,1,1,1
+access_configuration_bug,access_configuration_bug,model_configuration_bug,base.group_user,1,1,1,1
+access_team_support,access_team_support,model_team_support,base.group_user,1,1,1,1

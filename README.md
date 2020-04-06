@@ -77,6 +77,16 @@ Creation of the system user and contact from HR Employee with automatics task.
    3. The automatics task generate and contact
    4. To asociated boths with employee
 
+# Management System Bugs (versión 10.0.0.0.1)
+
+Management System Bugs. Error control and bug fixes in the Odoo Open source platform.
+
+ * versión 10.0.0.0.1
+   
+   1. Offers the ability to keep track of the bug.
+   2. You can see number of bugs assigned to the employee.
+   3. The automatics task generate and contact.
+
 
 Para más información dirigirse al portal: https://github.com/todooweb
 
