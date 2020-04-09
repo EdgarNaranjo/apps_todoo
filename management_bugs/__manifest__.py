@@ -19,10 +19,10 @@
 #
 ###############################################################################
 {
-    'name': "Management System Bugs",
-    'summary': """Management System Bugs""",
+    'name': "System Bugs Management",
+    'summary': """System Bugs Management""",
     'description': """
-        Management System Bugs. Error control and bug fixes in the Odoo Open source platform
+        System Bugs Management. Error control and bug fixes in the Odoo Open source platform
     """,
     'version': '10.0.0.0.1',
     'category': 'Tools',
