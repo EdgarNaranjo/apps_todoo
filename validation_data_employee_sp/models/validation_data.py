@@ -166,4 +166,4 @@ class HrEmployee(models.Model):
                 dob = datetime.strptime(obj_contract.birthday, '%Y-%m-%d')
                 today = date.today()
                 age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-            obj_contract.age = int(age)
+                obj_contract.age = int(age)
