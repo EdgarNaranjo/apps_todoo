@@ -87,6 +87,17 @@ System Bugs Management. Error control and bug fixes in the Odoo Open source plat
    2. You can see number of bugs assigned to the employee.
    3. The automatics task generate and contact.
 
+# Integrated Calculator (versión 10.0.0.0.1)
+
+Integrated Calculator within the odoo framework. Allows for multiple calculations.
+
+ * versión 10.0.0.0.1
+   
+   1. Addition and subtraction
+   2. Division and multiplication
+   3. Operations with percent
+   4. Working with real numbers
+
 
 Para más información dirigirse al portal: https://github.com/todooweb
 
