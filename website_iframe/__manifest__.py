@@ -4,7 +4,7 @@
 #    This module allows Clients to view external content through iframes by accessing 
 #    their personal account of the Odoo Virtual Office. This can be used to add content 
 #    from sources such as external report servers.
-#    Copyright (C) 2020- TODOOWEB.ES (https://www.todooweb.es)
+#    Copyright (C) 2020- todooweb.com (https://www.todooweb.com)
 #    @author ToDOO (https://www.linkedin.com/company/todooweb)
 #
 #    This program is distributed in the hope that it will be useful,
@@ -25,8 +25,8 @@
     'version': '10.0.0.1.1',
     'category': 'Website',
     'license': 'LGPL-3',
-    'author': "ToDOO (www.todooweb.es)",
-    'website': "https://todooweb.es/",
+    'author': "ToDOO (www.todooweb.com)",
+    'website': "https://todooweb.com/",
     'contributors': [
         "Equipo Dev <devtodoo@gmail.com>",
         "Edgar Naranjo <edgarnaranjof@gmail.com>",
