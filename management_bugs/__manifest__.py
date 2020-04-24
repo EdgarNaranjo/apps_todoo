@@ -6,7 +6,7 @@
 #    It will process the data entered and return a message indicating whether
 #    the company is eligible or not.
 #
-#    Copyright (C) 2020- TODOOWEB.ES (https://www.todooweb.es)
+#    Copyright (C) 2020- todooweb.com (https://www.todooweb.com)
 #    @author ToDOO (https://www.linkedin.com/company/todooweb)
 #
 #    This program is distributed in the hope that it will be useful,
@@ -27,8 +27,8 @@
     'version': '10.0.0.0.1',
     'category': 'Tools',
     'license': 'LGPL-3',
-    'author': "ToDOO (www.todooweb.es)",
-    'website': "https://todooweb.es/",
+    'author': "ToDOO (www.todooweb.com)",
+    'website': "https://todooweb.com/",
     'contributors': [
         "Equipo Dev <devtodoo@gmail.com>",
         "Edgar Naranjo <edgarnaranjof@gmail.com>",
